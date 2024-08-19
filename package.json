@@ -1,0 +1,41 @@
+{
+	"name": "@beyond-js/languages",
+	"version": "1.0.0",
+	"description": "A reactive language management system for multilingual applications, with support for automatic language detection, configuration, and change event handling.",
+	"license": "MIT",
+	"modules": {
+		"path": "./"
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "web",
+				"platform": "web",
+				"maps": "external",
+				"ports": {
+					"bundles": 8102
+				},
+				"ts": {
+					"compiler": "tsc"
+				}
+			},
+			{
+				"name": "node",
+				"platform": "node",
+				"ports": {
+					"bundles": 8103
+				},
+				"ts": {
+					"compiler": "tsc"
+				}
+			}
+		]
+	},
+	"dependencies": {
+		"@beyond-js/events": "^0.0.7",
+		"@beyond-js/kernel": "^0.1.9"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.18"
+	}
+}
